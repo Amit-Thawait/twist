@@ -6,4 +6,5 @@ class Account < ApplicationRecord
 
   accepts_nested_attributes_for :owner
 
+  has_many :invitations
 end
