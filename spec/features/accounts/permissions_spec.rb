@@ -22,6 +22,13 @@ feature "Account permissions" do
       visit root_url
       expect(page.current_url).to eq(root_url)
     end
+
+    scenario "should see the login url on signout" do
+      visit root_url
+      expect(page.current_url).to eq(root_url)
+      click_link "Sign out"
+      expect(page).to have_content("You have been successfully signed out.")
+    end
   end
 
   context "a user of the account" do
