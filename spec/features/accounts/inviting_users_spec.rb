@@ -10,7 +10,7 @@ feature "Inviting users" do
   end
 
   scenario "invites a user successfully" do
-    click_link "Invite User"
+    click_link "Users"
     fill_in "Email", with: "test@example.com"
     click_button "Invite User"
     expect(page).to have_content("test@example.com has been invited.")
