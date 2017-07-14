@@ -1,5 +1,4 @@
 class Invitation < ActiveRecord::Base
-  belongs_to :account
 
   before_create :generate_token
 
